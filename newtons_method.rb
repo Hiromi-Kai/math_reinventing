@@ -24,6 +24,3 @@ class NewtonsMethod
     end
   end
 end
-
-nm=NewtonsMethod.new(->(x){x**3+x-1},->(x){3*(x**2)+1},0.001)
-p nm.main_logic(1)
