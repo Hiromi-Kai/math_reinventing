@@ -22,3 +22,6 @@ class BisectionMethod
 end
 bm=BisectionMethod.new(->(x){x**3+x-1})
 p bm.main_logic(0,1)
+
+bm=BisectionMethod.new(->(x){(x-3)*(x+2)})
+p bm.main_logic(0,10)
