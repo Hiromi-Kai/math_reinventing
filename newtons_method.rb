@@ -18,9 +18,11 @@ class NewtonsMethod
   def main_logic(num)
     loop do
       approximation=get_approximation(num)
-      convergence=is_convergence?(num,approximation)
-      num=approximation unless convergence
-      return approximation if convergence
+      unless is_convergence?(num,approximation)
+        num=approximation 
+      else
+        return approximation
+      end
     end
   end
 end
