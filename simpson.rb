@@ -48,9 +48,9 @@ class SimpsonMethod
     range.select.with_index{|_,i|i%2!=0 and i!=0 and i!=range.length-1}
   end
   alias_method :y,:get_formula_answer
-  alias_method :h, :get_micro_height
+  alias_method :h,:get_micro_height
   alias_method :a,:get_range_start
-  alias_method :b, :get_range_end
+  alias_method :b,:get_range_end
   public
   #課題：公式とプログラムで偶数要素、奇数要素がごちゃごちゃになっている
   def get_integral_answer
