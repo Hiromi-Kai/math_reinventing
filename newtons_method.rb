@@ -6,7 +6,9 @@ class NewtonsMethod
     @eps=eps
     @func=func
     @derived_func=derived_func
+    @approximations=[]
   end
+  attr_reader :aproximations
   #近似値導出
   def get_approximation(num)
     num-@func.call(num).to_f/@derived_func.call(num).to_f
@@ -17,7 +19,7 @@ class NewtonsMethod
   end
   def main_logic(num)
     loop do
-      approximation=get_approximation(num)
+      @approximations << (approximation=get_approximation(num))
       unless is_convergence?(num,approximation)
         num=approximation 
       else
